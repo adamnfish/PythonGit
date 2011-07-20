@@ -41,6 +41,11 @@ as the `cwd` for git commands.
 
 Repositories contain the following methods.
 
+All the methods listed here return tuples containing the resulting
+STDOUT and STDERR. Additionally, the instance's `out` and `err`
+properties will always contain the STDOUT and STDERR respectively from
+the last method called.
+
 add
 ---
 
