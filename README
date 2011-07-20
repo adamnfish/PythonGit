@@ -1,0 +1,30 @@
+=========
+PythonGit
+=========
+
+If you want to control a Git repository from Python, you should use
+GitPython.
+
+If however, you were just going to run shell commands from Python then
+save yourself the hassle of writing it and use this.
+
+GitPython is just a collection of functions that will execute shell
+commands to manage the repository.
+
+Requirements
+============
+
+* Git
+
+Since PythonGit merely executes shell commands to control the
+repository, it must be installed on your system for this library to
+work.
+
+Install
+=======
+
+Download the source code from Github and run setup.py
+
+Usage
+=====
+
