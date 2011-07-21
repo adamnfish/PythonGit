@@ -6,7 +6,9 @@ If you want to control a Git repository from Python, you should use
 GitPython.
 
 If however, you were just going to run shell commands from Python then
-save yourself the hassle of writing it and use this.
+save yourself the hassle of writing it and use this. It is
+particularly useful for prototyping applications that need to interact
+with Git.
 
 GitPython is just a collection of functions that will execute shell
 commands to manage the repository.
