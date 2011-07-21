@@ -1,6 +1,8 @@
 import subprocess
 import os
 
+from version import VERSION
+
 
 class Repository(object):
     """
