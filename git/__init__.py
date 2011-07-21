@@ -36,6 +36,12 @@ class Repository(object):
         return (out, err)
 
     # shortcuts
+    def init(self, *args):
+        """
+        Helper for `git init`.
+        """
+        return self.cmd('init', *args)
+
     def add(self, filename, *args):
         """
         Helper for `git add`.
