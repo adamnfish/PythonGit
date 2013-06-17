@@ -2,8 +2,8 @@
 PythonGit
 =========
 
-If you want to control a Git repository from Python, you should use
-GitPython.
+This is a silly repository. If you want to control a Git repository
+from Python, you should use GitPython.
 
 If however, you were just going to run shell commands from Python then
 save yourself the hassle of writing it and use this. It is
@@ -48,6 +48,22 @@ STDOUT and STDERR. Additionally, the instance's `out` and `err`
 properties will always contain the STDOUT and STDERR respectively from
 the last method called.
 
+cmd
+---
+
+    repo.cmd(command, *args)
+
+This is the method used internally by the specific git command
+methods. It is a flexible interface to the git repository. If you need
+to use a git command that does not have a method built-in you can use
+this directly. The first argument is the git command to run and
+subsequent arguments are passed to it.
+
+All the other commands provided are just helper methods for calling
+this one with the right arguments. The rest aren't useless because I
+think they'll be a bit easier to understand in your code (since they
+look more like their Git counterparts).
+
 add
 ---
 
@@ -90,9 +106,16 @@ push
 
 The push method runs `git push <remote> <branch>  [args1, ... ]` in the repository.
 
-cmd
----
+fetch
+-----
 
-    repo.cmd(command, *args)
+    repo.fetch(remote, *args)
 
-This is the method used internally by the specific git command methods. It is a flexible interface to the git repository. If you need to use a git command that does not have a method built-in you can use this directly. The first argument is the git command to run and subsequent arguments are passed to it.
+The fetch method runs `git fetch <remote> [args1, ... ]` in the repository.
+
+merge
+-----
+
+    repo.merge(ref, *args)
+
+The merge method runs `git merge <ref> [args1, ... ]` in the repository.

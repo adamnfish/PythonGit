@@ -77,3 +77,15 @@ class Repository(object):
         Helper for `git pull`.
         """
         return self.cmd('push', remote, branch, *args)
+
+    def fetch(self, remote, *args):
+        """
+        Helper for `git fetch`.
+        """
+        return self.cmd('fetch', remote, *args)
+
+    def merge(self, ref, *args):
+        """
+        Helper for `git merge`.
+        """
+        return self.cmd('merge', ref, *args)
